@@ -51,7 +51,9 @@ export default function SideNav() {
 							) : (
 								<SettingsOutlinedIcon></SettingsOutlinedIcon>
 							)}
-							<span className='hidden md:inline ml-2'>Settings</span>
+							<span className='hidden md:inline ml-2'>
+								Settings
+							</span>
 						</Link>
 					</li>
 					<li
