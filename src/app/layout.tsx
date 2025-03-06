@@ -21,7 +21,7 @@ export default function RootLayout({
 						{/* Desktop Navbar */}
 						<SideNav></SideNav>
 					</section>
-					<section className='w-full h-2'>
+					<section className='w-full'>
 						{/* Page Content */}
 						{children}
 					</section>

@@ -22,7 +22,7 @@ export default function BottomNav() {
 				<li
 					className={`my-1 rounded-md transition-all duration-150 ease-in-out ${
 						pathname.startsWith("/dashboard")
-							? "font-bold text-gray-700 bg-white shadow-xs"
+							? "font-bold text-gray-700 bg-white shadow-md"
 							: "md:hover:font-bold md:hover:text-gray-700 md:hover:outline-2 text-gray-500 bg-gray-300"
 					}`}
 				>
@@ -38,7 +38,7 @@ export default function BottomNav() {
 				<li
 					className={`my-1 rounded-md transition-all duration-150 ease-in-out ${
 						pathname.startsWith("/campaigns")
-							? "font-bold text-gray-700 bg-white shadow-xs"
+							? "font-bold text-gray-700 bg-white shadow-md"
 							: "md:hover:font-bold md:hover:text-gray-700 md:hover:outline-2 text-gray-500 bg-gray-300"
 					}`}
 				>
@@ -54,7 +54,7 @@ export default function BottomNav() {
 				<li
 					className={`my-1 rounded-md transition-all duration-150 ease-in-out ${
 						pathname.startsWith("/flows")
-							? "font-bold text-gray-700 bg-white shadow-xs"
+							? "font-bold text-gray-700 bg-white shadow-md"
 							: "md:hover:font-bold md:hover:text-gray-700 md:hover:outline-2 text-gray-500 bg-gray-300"
 					}`}
 				>
@@ -70,7 +70,7 @@ export default function BottomNav() {
 				<li
 					className={`my-1 rounded-md transition-all duration-150 ease-in-out ${
 						pathname.startsWith("/integrations")
-							? "font-bold text-gray-700 bg-white shadow-xs"
+							? "font-bold text-gray-700 bg-white shadow-md"
 							: "md:hover:font-bold md:hover:text-gray-700 md:hover:outline-2 text-gray-500 bg-gray-300"
 					}`}
 				>
@@ -86,7 +86,7 @@ export default function BottomNav() {
 				<li
 					className={`my-1 rounded-md transition-all duration-150 ease-in-out ${
 						pathname.startsWith("/customers")
-							? "font-bold text-gray-700 bg-white shadow-xs"
+							? "font-bold text-gray-700 bg-white shadow-md"
 							: "md:hover:font-bold md:hover:text-gray-700 md:hover:outline-2 text-gray-500 bg-gray-300"
 					}`}
 				>

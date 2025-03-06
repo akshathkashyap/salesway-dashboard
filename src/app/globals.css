@@ -8,4 +8,28 @@
 		font-family: "Shadows Into Light", cursive;
 		font-style: normal;
 	}
+
+	.select-container {
+		@apply block cursor-pointer relative pr-4 rounded-2xl outline-2 outline-gray-300;
+	}
+
+	.select-container::after {
+		@apply content-[""] block absolute top-1/2 right-2 h-3 w-3 border-l-2 border-l-gray-500 border-t-2 border-t-gray-500;
+		transform: translateY(6px) rotateZ(225deg);
+		transform-origin: 0 0;
+		transition: all 0.2s ease-out;
+	}
+
+	.select-container:focus-within::after {
+		@apply rotate-[180deg];
+	}
+}
+
+select {
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 1px;
+	text-overflow: "";
+	outline: none;
 }
