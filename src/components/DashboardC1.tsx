@@ -14,26 +14,6 @@ interface DashboardC1Props {
 	compareTo: number;
 }
 
-// Used till API is not working --------
-const testProps: DashboardC1CardProps[] = [
-	{
-		name: "Purchases",
-		value: "4,294",
-		growth: 32,
-	},
-	{
-		name: "Revenue",
-		value: "$322.3k",
-		growth: 49,
-	},
-	{
-		name: "Refunds",
-		value: "$8.2k",
-		growth: -7,
-	},
-];
-// -------- -------- -------- -------- --------
-
 function DashboardC1Card({ name, value, growth }: DashboardC1CardProps) {
 	return (
 		<div className='flex flex-col items-start w-full max-w-[14rem] mb-6 p-3 rounded-2xl outline-2 outline-gray-200'>
@@ -76,7 +56,7 @@ export default function DashboardC1({ compareTo }: DashboardC1Props) {
 
 	return (
 		<span className='flex flex-wrap justify-between items-center gap-6 w-full my-6'>
-			{testProps.map((dashboardC1Obj: DashboardC1CardProps) => (
+			{result.map((dashboardC1Obj: DashboardC1CardProps) => (
 				<React.Fragment key={dashboardC1Obj.name}>
 					<DashboardC1Card
 						name={dashboardC1Obj.name}

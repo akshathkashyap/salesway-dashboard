@@ -33,3 +33,17 @@ select {
 	text-overflow: "";
 	outline: none;
 }
+
+@keyframes progressBarAnimation {
+	0% {
+		transform: scale(1);
+	}
+
+	90% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

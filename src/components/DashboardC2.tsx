@@ -19,11 +19,11 @@ export default function DashboardC2() {
 	const { setMonths, result } = useReqApi2();
 
 	const barData = useMemo(() => {
-		const labels: string[] = result.map((month) => month.Month);
+		const labels: string[] = result.map((month) => month.name);
 		const datasets = [
 			{
 				label: "Last year",
-				data: result.map((month) => month.Last_year),
+				data: result.map((month) => `${month.lastYear}`),
 				borderColor: "#96f7e4",
 				backgroundColor: "#96f7e4",
 				borderWidth: 2,
@@ -32,7 +32,7 @@ export default function DashboardC2() {
 			},
 			{
 				label: "This year",
-				data: result.map((month) => month.This_year),
+				data: result.map((month) => `${month.thisYear}`),
 				borderColor: "#155dfc",
 				backgroundColor: "#155dfc",
 				borderWidth: 2,
@@ -59,7 +59,7 @@ export default function DashboardC2() {
 	return (
 		<span className='w-full my-6'>
 			<span className='flex flex-row flex-wrap justify-between items-center gap-4 w-full'>
-				<h1 className="font-bold text-xl">Comparison</h1>
+				<h1 className='font-bold text-xl'>Comparison</h1>
 				<label htmlFor='months'></label>
 				<div className='select-container ml-2'>
 					<select

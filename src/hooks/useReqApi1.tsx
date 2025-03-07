@@ -28,7 +28,24 @@ export default function useReqApi1() {
 				},
 			});
 			const responseJson = await response.json();
-			setResult([]);
+
+			setResult([
+				{
+					name: "Purchases",
+					value: "4,294",
+					growth: 32,
+				},
+				{
+					name: "Revenue",
+					value: "$322.3k",
+					growth: 49,
+				},
+				{
+					name: "Refunds",
+					value: "$8.2k",
+					growth: -7,
+				},
+			]);
 		} catch (error) {
 			console.error(error);
 		}

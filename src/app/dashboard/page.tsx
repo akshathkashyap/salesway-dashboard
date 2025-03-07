@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import DashboardC1 from "@/components/DashboardC1";
 import DashboardC2 from "@/components/DashboardC2";
+import DashboardC3 from "@/components/DashboardC3";
 
 function DashboardCard({ children }: { children: React.ReactNode }) {
 	return <div className='p-6 bg-white rounded-3xl shadow-md'>{children}</div>;
@@ -44,9 +45,9 @@ export default function Dashboard() {
 					<DashboardC2></DashboardC2>
 				</DashboardCard>
 			</span>
-			<span className='flex flex-col gap-3'>
+			<span className='flex flex-col gap-3 max-w-sm'>
 				<DashboardCard>
-					<span className='block h-[15rem] w-[15rem]'></span>
+					<DashboardC3></DashboardC3>
 				</DashboardCard>
 				<DashboardCard>
 					<span className='block h-[15rem] w-[15rem]'></span>
