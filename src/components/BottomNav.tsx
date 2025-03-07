@@ -17,7 +17,7 @@ export default function BottomNav() {
 	const pathname = usePathname();
 
 	return (
-		<nav>
+		<nav className='bg-gray-300'>
 			<ul className='flex flex-row justify-evenly'>
 				<li
 					className={`my-1 rounded-md transition-all duration-150 ease-in-out ${
