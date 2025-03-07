@@ -13,7 +13,7 @@ const requestUrl: string =
 
 export default function useReqApi1() {
 	const [dataAge, setDataAge] = useState<number>(12);
-	const [responseString, setResponseString] = useState<Api1Response[]>([]);
+	const [result, setResult] = useState<Api1Response[]>([]);
 
 	async function fetchApi1Response(): Promise<void> {
 		try {
@@ -28,7 +28,7 @@ export default function useReqApi1() {
 				},
 			});
 			const responseJson = await response.json();
-			setResponseString([]);
+			setResult([]);
 		} catch (error) {
 			console.error(error);
 		}
@@ -38,5 +38,5 @@ export default function useReqApi1() {
 		fetchApi1Response();
 	}, [dataAge]);
 
-	return { setDataAge, response: responseString };
+	return { setDataAge, result };
 }

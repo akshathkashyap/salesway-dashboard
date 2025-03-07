@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import DashboardC1 from "@/components/DashboardC1";
+import DashboardC2 from "@/components/DashboardC2";
 
 function DashboardCard({ children }: { children: React.ReactNode }) {
 	return <div className='p-6 bg-white rounded-3xl shadow-md'>{children}</div>;
@@ -11,10 +12,10 @@ export default function Dashboard() {
 	const [compareTo, setCompareTo] = useState<number>(12);
 
 	return (
-		<section className='flex flex-col md:flex-row gap-3 w-full p-3'>
-			<span className='flex flex-col gap-3 w-full'>
+		<section className='flex flex-row flex-wrap gap-3 w-full p-3'>
+			<span className='flex flex-col gap-3 w-full max-w-3xl'>
 				<DashboardCard>
-					<span className='flex flex-row justify-between'>
+					<span className='flex flex-row flex-wrap justify-between gap-4 mb-10'>
 						<h1 className='font-bold text-4xl'>Dashboard</h1>
 						<span className='flex flex-row justify-center items-center'>
 							<label
@@ -25,7 +26,7 @@ export default function Dashboard() {
 							</label>
 							<div className='select-container ml-2'>
 								<select
-									className='block font-semibold p-2 pr-6'
+									className='block font-semibold px-4 py-2 pr-6'
 									name='compareTo'
 									id='compareTo'
 									value={compareTo}
@@ -33,14 +34,14 @@ export default function Dashboard() {
 										setCompareTo(parseInt(e.target.value))
 									}
 								>
-									<option value='12'>Last Year</option>
-									<option value='24'>2023</option>
-									<option value='36'>2022</option>
+									<option value='12'>This year</option>
+									<option value='24'>Last Year</option>
 								</select>
 							</div>
 						</span>
 					</span>
 					<DashboardC1 compareTo={compareTo}></DashboardC1>
+					<DashboardC2></DashboardC2>
 				</DashboardCard>
 			</span>
 			<span className='flex flex-col gap-3'>

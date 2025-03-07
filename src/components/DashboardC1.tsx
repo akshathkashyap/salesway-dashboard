@@ -36,7 +36,7 @@ const testProps: DashboardC1CardProps[] = [
 
 function DashboardC1Card({ name, value, growth }: DashboardC1CardProps) {
 	return (
-		<div className='flex flex-col items-start w-full max-w-2xs p-3 rounded-2xl outline-2 outline-gray-200'>
+		<div className='flex flex-col items-start w-full max-w-[14rem] mb-6 p-3 rounded-2xl outline-2 outline-gray-200'>
 			<span className='font-semibold text-gray-500 width-full mb-3'>
 				{name}
 			</span>
@@ -68,7 +68,7 @@ function DashboardC1Card({ name, value, growth }: DashboardC1CardProps) {
 }
 
 export default function DashboardC1({ compareTo }: DashboardC1Props) {
-	const { setDataAge, response } = useReqApi1();
+	const { setDataAge, result } = useReqApi1();
 
 	useEffect(() => {
 		setDataAge(compareTo);

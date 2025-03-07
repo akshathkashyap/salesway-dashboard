@@ -10,7 +10,7 @@
 	}
 
 	.select-container {
-		@apply block cursor-pointer relative pr-4 rounded-2xl outline-2 outline-gray-300;
+		@apply block cursor-pointer relative pr-4 rounded-4xl outline-2 outline-gray-300;
 	}
 
 	.select-container::after {
