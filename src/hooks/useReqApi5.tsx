@@ -8,8 +8,7 @@ interface Api5Response {
 	positive: number;
 }
 
-const requestUrl: string =
-	"http://3.111.196.92:8020/api/v1/sample_assignment_api_5/";
+const requestUrl: string = "/dashboard/proxy/sample_assignment_api_5";
 
 export default function useReqApi5() {
 	const [result, setResult] = useState<Api5Response>({

@@ -8,8 +8,7 @@ interface Api1Response {
 	growth: number;
 }
 
-const requestUrl: string =
-	"http://3.111.196.92:8020/api/v1/sample_assignment_api_1/";
+const requestUrl: string = "/dashboard/proxy/sample_assignment_api_1";
 
 export default function useReqApi1() {
 	const [dataAge, setDataAge] = useState<number>(12);

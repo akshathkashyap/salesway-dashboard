@@ -6,8 +6,7 @@ interface Api3Response {
 	points: number;
 }
 
-const requestUrl: string =
-	"http://3.111.196.92:8020/api/v1/sample_assignment_api_3/";
+const requestUrl: string = "/dashboard/proxy/sample_assignment_api_3";
 
 export default function useReqApi3() {
 	const [result, setResult] = useState<Api3Response>({ points: 0 });

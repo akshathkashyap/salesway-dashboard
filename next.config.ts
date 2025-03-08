@@ -20,6 +20,14 @@ const nextConfig: NextConfig = {
 			},
 		],
 	},
+	async rewrites() {
+		return [
+			{
+				source: "/dashboard/proxy/:path*",
+				destination: "http://3.111.196.92:8020/api/v1/:path*",
+			},
+		];
+	},
 };
 
 export default nextConfig;
