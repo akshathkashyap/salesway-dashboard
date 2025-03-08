@@ -45,7 +45,7 @@ export default function DashboardC3() {
 				</span>
 			</span>
 			<hr className='text-gray-300 my-6' />
-			<h3 className='font-bold text-xl'>You're good!</h3>
+			<h3 className='font-bold text-xl mb-3'>You're good!</h3>
 			<p className='text-gray-500'>
 				Your sale performance score is better than 80% other users
 			</p>
