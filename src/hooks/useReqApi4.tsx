@@ -8,7 +8,7 @@ interface Api4Response {
 	offlineSelling: number;
 }
 
-const requestUrl: string = `${process.env.NEXT_PUBLIC_URL}/dashboard/dashboard_component_4`;
+const requestUrl: string = "/dashboard/dashboard_component_4";
 
 function transformResponse(response: any[]): Api4Response[] {
 	return response.map((sale) => {

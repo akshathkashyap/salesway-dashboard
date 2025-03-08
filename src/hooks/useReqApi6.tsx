@@ -10,7 +10,7 @@ interface Api6Response {
 	rating: number;
 }
 
-const requestUrl: string = `${process.env.NEXT_PUBLIC_URL}/dashboard/dashboard_component_6`;
+const requestUrl: string = "/dashboard/dashboard_component_6";
 
 function transformResponse(response: any[]): Api6Response[] {
 	return response.map((product) => {

@@ -8,7 +8,7 @@ interface Api2Response {
 	thisYear: number;
 }
 
-const requestUrl: string = `${process.env.NEXT_PUBLIC_URL}/dashboard/dashboard_component_2`;
+const requestUrl: string = "/dashboard/dashboard_component_2";
 
 function transformResponse(response: any[]): Api2Response[] {
 	return response.map((month) => {
