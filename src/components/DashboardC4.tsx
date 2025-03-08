@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { Line } from "react-chartjs-2";
 import {
 	Chart as ChartJS,
@@ -51,18 +51,6 @@ export default function DashboardC4() {
 				},
 			],
 		};
-	}, [result]);
-	const webSalesGrowth: number = useMemo(() => {
-		if (!result.length) return 0;
-		const initialValue: number = result[0].webSales;
-		const currentValue: number = result[result.length - 1].webSales;
-		return Math.floor(((currentValue - initialValue) / initialValue) * 100);
-	}, [result]);
-	const offlineSellingGrowth: number = useMemo(() => {
-		if (!result.length) return 0;
-		const initialValue: number = result[0].offlineSelling;
-		const currentValue: number = result[result.length - 1].offlineSelling;
-		return Math.floor(((currentValue - initialValue) / initialValue) * 100);
 	}, [result]);
 
 	const lineOptions = {

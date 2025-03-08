@@ -58,7 +58,7 @@ export default function DashboardC2() {
 	}, [displayMonths]);
 
 	return (
-		<span className='w-full my-6'>
+		<span className='max-h-96 w-full my-6'>
 			<span className='flex flex-row flex-wrap justify-between items-center gap-4 w-full'>
 				<h1 className='font-bold text-xl'>Comparison</h1>
 				<label htmlFor='months'></label>

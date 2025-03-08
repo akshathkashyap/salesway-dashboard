@@ -5,17 +5,18 @@ import DashboardC1 from "@/components/DashboardC1";
 import DashboardC2 from "@/components/DashboardC2";
 import DashboardC3 from "@/components/DashboardC3";
 import DashboardC4 from "@/components/DashboardC4";
+import DashboardC5 from "@/components/DashboardC5";
 
 function DashboardCard({ children }: { children: React.ReactNode }) {
-	return <div className='p-6 bg-white rounded-3xl shadow-md'>{children}</div>;
+	return <div className='w-full p-6 bg-white rounded-3xl shadow-md'>{children}</div>;
 }
 
 export default function Dashboard() {
 	const [compareTo, setCompareTo] = useState<number>(12);
 
 	return (
-		<section className='flex flex-row flex-wrap gap-3 w-full p-3'>
-			<span className='flex flex-col gap-3 w-full max-w-3xl'>
+		<section className='flex flex-col xl:flex-row gap-3 w-full p-3 mb-16 md:mb-auto'>
+			<span className='w-full'>
 				<DashboardCard>
 					<span className='flex flex-row flex-wrap justify-between gap-4 mb-10'>
 						<h1 className='font-bold text-4xl'>Dashboard</h1>
@@ -46,7 +47,7 @@ export default function Dashboard() {
 					<DashboardC2></DashboardC2>
 				</DashboardCard>
 			</span>
-			<span className='flex flex-col gap-3 max-w-sm'>
+			<span className='flex flex-row xl:flex-col flex-wrap items-start gap-3 w-full md:max-w-sm'>
 				<DashboardCard>
 					<DashboardC3></DashboardC3>
 				</DashboardCard>
@@ -54,7 +55,7 @@ export default function Dashboard() {
 					<DashboardC4></DashboardC4>
 				</DashboardCard>
 				<DashboardCard>
-					<span className='block h-[15rem] w-[15rem]'></span>
+					<DashboardC5></DashboardC5>
 				</DashboardCard>
 			</span>
 		</section>
