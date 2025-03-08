@@ -49,7 +49,7 @@ export default function DashboardC3() {
 			<p className='text-gray-500'>
 				Your sale performance score is better than 80% other users
 			</p>
-			<button className='cursor-pointer my-6 px-4 py-2 rounded-4xl outline-2 outline-gray-300 transition-all duration-150 ease-in-out hover:bg-blue-600 hover:text-gray-200'>
+			<button className='cursor-pointer font-semibold my-6 px-4 py-2 rounded-4xl outline-2 outline-gray-300 transition-all duration-150 ease-in-out hover:bg-blue-600 hover:text-white'>
 				Improve your score
 			</button>
 		</span>

@@ -6,9 +6,14 @@ import DashboardC2 from "@/components/DashboardC2";
 import DashboardC3 from "@/components/DashboardC3";
 import DashboardC4 from "@/components/DashboardC4";
 import DashboardC5 from "@/components/DashboardC5";
+import DashboardC6 from "@/components/DashboardC6";
 
 function DashboardCard({ children }: { children: React.ReactNode }) {
-	return <div className='w-full p-6 bg-white rounded-3xl shadow-md'>{children}</div>;
+	return (
+		<div className='w-full p-6 bg-white rounded-3xl shadow-md'>
+			{children}
+		</div>
+	);
 }
 
 export default function Dashboard() {
@@ -45,6 +50,7 @@ export default function Dashboard() {
 					</span>
 					<DashboardC1 compareTo={compareTo}></DashboardC1>
 					<DashboardC2></DashboardC2>
+					<DashboardC6></DashboardC6>
 				</DashboardCard>
 			</span>
 			<span className='flex flex-row xl:flex-col flex-wrap items-start gap-3 w-full md:max-w-sm'>

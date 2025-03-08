@@ -21,7 +21,7 @@ export default function RootLayout({
 						{/* Desktop Navbar */}
 						<SideNav></SideNav>
 					</section>
-					<section className='w-full h-full overflow-y-auto'>
+					<section className='w-full h-full overflow-x-hidden overflow-y-auto'>
 						{/* Page Content */}
 						{children}
 					</section>
