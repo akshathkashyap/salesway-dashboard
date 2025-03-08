@@ -13,17 +13,17 @@ export default function useReqApi3() {
 
 	async function fetchApi3Response(): Promise<void> {
 		try {
-			const response = await fetch(requestUrl, {
-				method: "GET",
-				headers: {
-					Authorization:
-						"Basic " +
-						btoa(
-							`${process.env.API_USERNAME}:${process.env.API_PASSWORD}`
-						),
-				},
-			});
-			const responseJson = await response.json();
+			// const response = await fetch(requestUrl, {
+			// 	method: "GET",
+			// 	headers: {
+			// 		Authorization:
+			// 			"Basic " +
+			// 			btoa(
+			// 				`${process.env.API_USERNAME}:${process.env.API_PASSWORD}`
+			// 			),
+			// 	},
+			// });
+			// const responseJson = await response.json();
 
 			setResult({ points: 78 });
 		} catch (error) {

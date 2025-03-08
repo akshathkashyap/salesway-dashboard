@@ -16,17 +16,17 @@ export default function useReqApi1() {
 
 	async function fetchApi1Response(): Promise<void> {
 		try {
-			const response = await fetch(requestUrl, {
-				method: "GET",
-				headers: {
-					Authorization:
-						"Basic " +
-						btoa(
-							`${process.env.API_USERNAME}:${process.env.API_PASSWORD}`
-						),
-				},
-			});
-			const responseJson = await response.json();
+			// const response = await fetch(requestUrl, {
+			// 	method: "GET",
+			// 	headers: {
+			// 		Authorization:
+			// 			"Basic " +
+			// 			btoa(
+			// 				`${process.env.API_USERNAME}:${process.env.API_PASSWORD}`
+			// 			),
+			// 	},
+			// });
+			// const responseJson = await response.json();
 
 			setResult([
 				{

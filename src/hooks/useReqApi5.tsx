@@ -19,17 +19,17 @@ export default function useReqApi5() {
 
 	async function fetchApi5Response(): Promise<void> {
 		try {
-			const response = await fetch(requestUrl, {
-				method: "GET",
-				headers: {
-					Authorization:
-						"Basic " +
-						btoa(
-							`${process.env.API_USERNAME}:${process.env.API_PASSWORD}`
-						),
-				},
-			});
-			const responseJson = await response.json();
+			// const response = await fetch(requestUrl, {
+			// 	method: "GET",
+			// 	headers: {
+			// 		Authorization:
+			// 			"Basic " +
+			// 			btoa(
+			// 				`${process.env.API_USERNAME}:${process.env.API_PASSWORD}`
+			// 			),
+			// 	},
+			// });
+			// const responseJson = await response.json();
 
 			setResult({
 				negative: 12,
