@@ -45,10 +45,11 @@ export default function DashboardC2() {
 			datasets,
 		};
 	}, [result]);
+
 	const barOptions = {
 		responsive: true,
 		plugins: {
-			legend: { display: true },
+			legend: { display: true, position: "bottom" as const },
 		},
 	};
 
@@ -80,7 +81,7 @@ export default function DashboardC2() {
 					</select>
 				</div>
 			</span>
-			<Bar data={barData} options={barOptions}></Bar>
+			<Bar className='mt-6' data={barData} options={barOptions}></Bar>
 		</span>
 	);
 }
