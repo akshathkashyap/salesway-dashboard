@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Salesway Dashboard
 
-## Getting Started
+Salesway Dashboard is a Next.js-based dashboard application that provides insights using data fetched from an external API and an SQLite database. It is deployed at [Salesway Dashboard](https://salesway-dashboard-iota.vercel.app/).
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   Home page (`/`)
+-   Dashboard page (`/dashboard`)
+-   Fetches data from an external API for some dashboard components
+-   Uses an SQLite database (`salesway_db.sqlite`) for other dashboard components
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation & Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   Node.js (latest LTS version recommended)
+-   SQLite
+-   Next.js
 
-## Learn More
+### Steps
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+    ```sh
+    git clone <repository-url>
+    cd salesway-dashboard
+    ```
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
+3. Set up environment variables: Create a `.env.local` file in the root directory and configure the required API keys and database paths:
+    ```sh
+    NEXT_PUBLIC_API_USERNAME=<username>
+    NEXT_PUBLIC_API_PASSWORD=<password>
+    ```
+4. Run the development server:
+    ```sh
+    npm run dev
+    ```
+    The app will be available at `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application is deployed on Vercel at [Salesway Dashboard](https://salesway-dashboard-iota.vercel.app/).
 
-## Deploy on Vercel
+## Issues
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   Currently, only the home (`/`) and dashboard (`/dashboard`) pages are working. Other navigational options may not function as expected.
+-   The charts do not work in the deployed version but function correctly when run locally.
+-   The external API is not being used properly due to security issues, leading to a mixed content error and authentication problems.
